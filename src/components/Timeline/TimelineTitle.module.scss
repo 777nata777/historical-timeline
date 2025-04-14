@@ -1,0 +1,34 @@
+.timelineTitleContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 170px;
+
+  @media (max-width: 425px) {
+    padding-top: 7vh;
+  }
+}
+
+.timelineLine {
+  width: 5px;
+  height: 120px;
+  margin-right: 78px;
+  background: linear-gradient(180deg, #3877ee -5%, #ef5da8 85%);
+
+  @media (max-width: 425px) {
+    display: none;
+  }
+}
+
+.timelineTitle {
+  font-weight: 700;
+  font-size: clamp(20px, 5vw, 56px);
+  width: clamp(123px, 40vw, 353px);
+  line-height: 120%;
+  color: #42567a;
+
+  @media (max-width: 425px) {
+    font-size: 20px;
+    width: 123px;
+  }
+}

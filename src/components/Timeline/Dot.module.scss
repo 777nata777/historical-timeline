@@ -1,0 +1,68 @@
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #42567A;
+  border: 2px solid #42567A;
+  border-radius: 50%;
+  opacity: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #42567A;
+  cursor: pointer;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.fixedContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.dotNumber {
+  position: absolute;
+  color: #42567A;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Подпись справа */
+.dotLabel {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: clamp(12px, 4vw, 20px);
+  position: absolute;
+  transform: translateY(-50%);
+  color: #42567A;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dot:hover ,
+.dot.active {
+  width: 56px;
+  height: 56px;
+  background: white;
+}
+
+.dot:hover .dotNumber,
+.dot.active .dotNumber {
+  opacity: 1;
+
+}
+
+.dot:hover .dotLabel,
+.dot.active .dotLabel {
+  opacity: 1;
+}
